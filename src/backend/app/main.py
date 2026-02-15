@@ -1,6 +1,7 @@
 """FastAPI application entry point."""
 
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 
 from app.api.routes import router
 
@@ -33,6 +34,13 @@ No auth needed for demo. All requests use the demo tenant by default.
         {"name": "Screening", "description": "Trigger AI screening and view results"},
         {"name": "Feedback", "description": "Submit human feedback on AI scores"},
     ],
+)
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
 app.include_router(router, prefix="/api/v1")

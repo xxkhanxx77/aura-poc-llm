@@ -10,14 +10,15 @@ weaknesses, and reasoning.
 |---|---------|-----------------|
 | 1 | [Approach](#approach) | What this project does and key decisions |
 | 2 | [Tech Stack](#tech-stack) | All technologies used |
-| 3 | [Project Structure](#project-structure) | Files and folders explained |
-| 4 | [Runbook](#runbook) | How to start the app (one command) |
-| 5 | [End-to-End API Flow](#end-to-end-api-flow-curl-examples) | 7-step curl walkthrough |
-| 6 | [API Endpoints Summary](#api-endpoints-summary) | All 10 endpoints in one table |
-| 7 | [What the AI Returns](#what-the-ai-returns) | Score format explained |
-| 8 | [Cost Controls](#cost-controls) | 4 layers of cost management |
-| 9 | [Design Decisions](#design-decisions-detailed) | Architecture, RAG, prompts, data model |
-| 10 | [What I Would Improve](#what-i-would-improve-with-more-time) | Future work |
+| 3 | [Frontend](#frontend) | React UI with screenshots |
+| 4 | [Project Structure](#project-structure) | Files and folders explained |
+| 5 | [Runbook](#runbook) | How to start the app (one command) |
+| 6 | [End-to-End API Flow](#end-to-end-api-flow-curl-examples) | 7-step curl walkthrough |
+| 7 | [API Endpoints Summary](#api-endpoints-summary) | All 10 endpoints in one table |
+| 8 | [What the AI Returns](#what-the-ai-returns) | Score format explained |
+| 9 | [Cost Controls](#cost-controls) | 4 layers of cost management |
+| 10 | [Design Decisions](#design-decisions-detailed) | Architecture, RAG, prompts, data model |
+| 11 | [What I Would Improve](#what-i-would-improve-with-more-time) | Future work |
 
 ## Approach
 
@@ -67,6 +68,19 @@ The system uses a RAG (Retrieval-Augmented Generation) pipeline:
 | PDF Parsing | PyMuPDF | Extracts text from uploaded PDF files |
 | Package Manager | uv (astral-sh) | Fast Python dependency management |
 | Container | Docker Compose | Runs all 4 services together |
+
+## Frontend
+
+A React frontend is available in a separate repo:
+**https://github.com/xxkhanxx77/aura-poc-frontend**
+
+Features a **Career Page** where candidates browse jobs and upload PDF resumes,
+and an **Admin Dashboard** where HR reviews AI screening results with scores,
+strengths, weaknesses, and can submit feedback.
+
+![Admin Dashboard](https://raw.githubusercontent.com/xxkhanxx77/aura-poc-frontend/main/docs/images/admin-dashboard.png)
+
+![Career Page](https://raw.githubusercontent.com/xxkhanxx77/aura-poc-frontend/main/docs/images/career-page.png)
 
 ## Project Structure
 

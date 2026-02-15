@@ -23,5 +23,4 @@ htmlcov/
 *.swo
 .DS_Store
 
-# PDF uploads (user data)
-pdf/
+# PDF uploads (user data) -- sample PDF is tracked for easy setup

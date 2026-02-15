@@ -213,11 +213,13 @@ Replace `<job-id>` with the ID from Step 1.
 
 ```bash
 curl -s -X POST http://localhost:8000/api/v1/resumes/upload-pdf \
-  -F "file=@path/to/resume.pdf" \
+  -F "file=@pdf/Aran_Sriaran_Software_Resume_2025.pdf" \
   -F "candidate_name=Aran Sriaran" \
   -F "job_id=<job-id>" \
   -F "email=aran@example.com" | python3 -m json.tool
 ```
+
+A sample resume PDF is included in the repo at `pdf/` for easy testing.
 
 What happens behind the scenes:
 1. PDF text is extracted using PyMuPDF
